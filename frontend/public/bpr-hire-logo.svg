@@ -1,0 +1,26 @@
+<svg width="520" height="140" viewBox="0 0 520 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueFill" x1="20" y1="0" x2="160" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E4A86"/>
+      <stop offset="1" stop-color="#0A2E63"/>
+    </linearGradient>
+    <linearGradient id="greenFill" x1="110" y1="12" x2="190" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76D234"/>
+      <stop offset="1" stop-color="#4EAE27"/>
+    </linearGradient>
+    <linearGradient id="swooshFill" x1="16" y1="84" x2="172" y2="138" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C5B9A"/>
+      <stop offset="1" stop-color="#0B2B59"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6 7)">
+    <circle cx="32" cy="18" r="10" fill="url(#blueFill)"/>
+    <path d="M20 42C20 33.1634 27.1634 26 36 26H70C101.48 26 122 46.2304 122 73C122 99.7696 101.48 120 70 120H49V89H66.5C82.2401 89 91 83.5251 91 72.5C91 61.4749 82.2401 56 66.5 56H49V120H20V42Z" fill="url(#blueFill)"/>
+    <path d="M118 20C118 11.1634 125.163 4 134 4C142.837 4 150 11.1634 150 20C150 28.8366 142.837 36 134 36C125.163 36 118 28.8366 118 20Z" fill="url(#greenFill)"/>
+    <path d="M116 50C116 41.1634 123.163 34 132 34H136C167.48 34 188 54.2304 188 81C188 96.4315 181.158 110.001 168.256 118.912L190 154H153.8L138.386 127.87C137.391 127.957 136.388 128 135.38 128H145.2V96H136C135.664 96 135.331 95.9949 135 95.9849V128H106V50H116Z" fill="url(#greenFill)"/>
+    <path d="M135 63V95H145.2C160.94 95 169.7 89.5251 169.7 78.5C169.7 67.4749 160.94 63 145.2 63H135Z" fill="white" fill-opacity="0.96"/>
+    <path d="M17 106C33.3162 126.641 62.7015 138 97.5 138C126.63 138 154.381 130.041 176 115.909C161.661 122.42 144.298 126.091 126 126.091C79.1162 126.091 42.6985 107.732 20.7333 74L17 106Z" fill="url(#swooshFill)"/>
+  </g>
+  <text x="210" y="84" fill="#0C2D57" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="0.4">BPR</text>
+  <text x="322" y="84" fill="#58BA2D" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="0.4">HIRE</text>
+</svg>

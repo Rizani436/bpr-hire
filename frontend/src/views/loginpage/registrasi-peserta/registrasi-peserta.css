@@ -1,0 +1,334 @@
+.bh-register-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(7, 24, 48, 0.62);
+  backdrop-filter: blur(8px);
+}
+
+.bh-register-modal-card {
+  width: min(820px, 100%);
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid #dbe6f4;
+  background: #ffffff;
+  box-shadow: 0 28px 70px rgba(9, 39, 90, 0.28);
+  padding: 22px;
+}
+
+.bh-register-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bh-register-modal-head p {
+  margin: 0;
+  color: #2f9d3e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bh-register-modal-head h2 {
+  margin: 6px 0 0;
+  color: #0f2f5d;
+  font-size: 24px;
+  line-height: 1.24;
+}
+
+.bh-register-modal-close {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid #dbe6f4;
+  background: #f8fbff;
+  color: #17355e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.bh-register-modal-form {
+  display: grid;
+  gap: 16px;
+}
+
+.bh-register-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.bh-register-field {
+  display: grid;
+  gap: 7px;
+}
+
+.bh-register-field span {
+  color: #143761;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bh-register-field-full {
+  grid-column: 1 / -1;
+}
+
+.bh-register-input-shell {
+  min-height: 46px;
+  border-radius: 11px;
+  border: 1px solid #d6dfed;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+}
+
+.bh-register-input-shell svg {
+  color: #5e7898;
+  flex: none;
+}
+
+.bh-register-input-shell input,
+.bh-register-input-shell textarea {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #153661;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.bh-register-input-shell input::placeholder,
+.bh-register-input-shell textarea::placeholder {
+  color: #8fa4bf;
+}
+
+.bh-register-textarea-shell {
+  align-items: flex-start;
+  padding-top: 10px;
+  min-height: 90px;
+}
+
+.bh-register-textarea-shell textarea {
+  resize: vertical;
+  min-height: 66px;
+}
+
+.bh-register-otp-box {
+  border: 1px solid #d8e7d5;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #edf8e8 0%, #f8fbff 100%);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bh-register-otp-box h3 {
+  margin: 0;
+  color: #17355e;
+  font-size: 14px;
+}
+
+.bh-register-otp-box p {
+  margin: 5px 0 0;
+  color: #56708f;
+  font-size: 12px;
+}
+
+.bh-register-otp-send-btn {
+  height: 38px;
+  border-radius: 10px;
+  border: 0;
+  background: linear-gradient(100deg, #43bd32 0%, #158a3b 95%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bh-register-otp-send-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+}
+
+.bh-register-otp-input-wrap {
+  border: 1px dashed #cde0f8;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 13px;
+}
+
+.bh-register-otp-meta {
+  margin: 0 0 8px;
+  color: #355578;
+  font-size: 12px;
+}
+
+.bh-register-otp-debug {
+  margin: 0 0 10px;
+  color: #2c6aa9;
+  font-size: 12px;
+}
+
+.bh-register-error {
+  margin: 0;
+  color: #bd1f1f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bh-register-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.bh-register-cancel-btn,
+.bh-register-submit-btn {
+  height: 40px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.bh-register-cancel-btn {
+  border: 1px solid #d3deed;
+  background: #ffffff;
+  color: #1d3f69;
+}
+
+.bh-register-submit-btn {
+  border: 0;
+  background: linear-gradient(100deg, #0f3c7a 0%, #158a3b 95%);
+  color: #ffffff;
+}
+
+.bh-register-submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+:root[data-theme="dark"] .bh-register-modal-backdrop {
+  background: rgba(2, 8, 20, 0.76);
+}
+
+:root[data-theme="dark"] .bh-register-modal-card {
+  border-color: #2a3d5a;
+  background: #111c2f;
+  box-shadow: 0 28px 70px rgba(2, 8, 20, 0.58);
+}
+
+:root[data-theme="dark"] .bh-register-modal-head h2,
+:root[data-theme="dark"] .bh-register-field span,
+:root[data-theme="dark"] .bh-register-otp-box h3 {
+  color: #e5efff;
+}
+
+:root[data-theme="dark"] .bh-register-modal-head p {
+  color: #86efac;
+}
+
+:root[data-theme="dark"] .bh-register-modal-close {
+  border-color: #355070;
+  background: #0f1a2c;
+  color: #cfe0ff;
+}
+
+:root[data-theme="dark"] .bh-register-input-shell {
+  border-color: #355070;
+  background: #0f1a2c;
+}
+
+:root[data-theme="dark"] .bh-register-input-shell svg {
+  color: #90a9cb;
+}
+
+:root[data-theme="dark"] .bh-register-input-shell input,
+:root[data-theme="dark"] .bh-register-input-shell textarea {
+  color: #dbeafe;
+}
+
+:root[data-theme="dark"] .bh-register-input-shell input::placeholder,
+:root[data-theme="dark"] .bh-register-input-shell textarea::placeholder {
+  color: #7f95b7;
+}
+
+:root[data-theme="dark"] .bh-register-otp-box {
+  border-color: #2f4a35;
+  background: linear-gradient(135deg, #102238 0%, #122b24 100%);
+}
+
+:root[data-theme="dark"] .bh-register-otp-box p,
+:root[data-theme="dark"] .bh-register-otp-meta {
+  color: #a9bedf;
+}
+
+:root[data-theme="dark"] .bh-register-otp-input-wrap {
+  border-color: #355070;
+  background: #102238;
+}
+
+:root[data-theme="dark"] .bh-register-otp-debug {
+  color: #93c5fd;
+}
+
+:root[data-theme="dark"] .bh-register-cancel-btn {
+  border-color: #355070;
+  background: #0f1a2c;
+  color: #dbeafe;
+}
+
+@media (max-width: 700px) {
+  .bh-register-modal-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .bh-register-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bh-register-otp-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bh-register-otp-send-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bh-register-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .bh-register-cancel-btn,
+  .bh-register-submit-btn {
+    width: 100%;
+  }
+}

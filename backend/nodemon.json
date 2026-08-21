@@ -1,0 +1,21 @@
+{
+  "watch": [
+    "index.js",
+    "config",
+    "controllers",
+    "middleware",
+    "models",
+    "routes",
+    "services",
+    "utils"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "node_modules",
+    "uploads",
+    "*.log",
+    "../FRONTEND/dist",
+    "../FRONTEND/node_modules"
+  ],
+  "delay": "700"
+}

@@ -1,0 +1,964 @@
+.bh-login-page {
+  --bh-navy: #0d2f60;
+  --bh-navy-soft: #27476f;
+  --bh-green: #46b02f;
+  --bh-border: #d6dfed;
+  --bh-bg: #f3f7fd;
+  --bh-footer-height: clamp(64px, 8.5vh, 88px);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(140deg, #f7fafe 0%, #f2f6fc 44%, #eef4fb 100%);
+  color: var(--bh-navy);
+  isolation: isolate;
+}
+
+.bh-theme-toggle--login {
+  position: absolute;
+  top: clamp(18px, 2.8vh, 28px);
+  right: clamp(18px, 2.5vw, 30px);
+  z-index: 30;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 10px 24px rgba(15, 52, 96, 0.12);
+}
+
+.bh-theme-toggle--login:hover {
+  transform: translateY(-1px);
+}
+
+.bh-login-page * {
+  box-sizing: border-box;
+}
+
+.bh-login-page a {
+  text-decoration: none;
+}
+
+.bh-login-main {
+  position: relative;
+  z-index: 2;
+  flex: 1 0 auto;
+  min-height: calc(100dvh - var(--bh-footer-height));
+  width: min(1680px, calc(100% - clamp(56px, 7vw, 160px)));
+  margin: 0 auto;
+  padding: clamp(28px, 5.2vh, 54px) 0 clamp(24px, 3vh, 34px);
+  display: grid;
+  grid-template-columns: minmax(420px, 0.96fr) clamp(470px, 34vw, 600px);
+  align-items: start;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 92px);
+}
+
+.bh-login-left {
+  position: relative;
+  max-width: 700px;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.bh-login-logo {
+  width: auto;
+  height: clamp(42px, 3.25vw, 56px);
+}
+
+.bh-login-title {
+  margin: clamp(44px, 8.9vh, 92px) 0 0;
+  color: #0f2f5d;
+  font-size: 38px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.bh-login-title-line-2 {
+  white-space: nowrap;
+}
+
+.bh-login-title-highlight {
+  color: var(--bh-green);
+}
+
+.bh-login-description {
+  margin: clamp(16px, 2.4vh, 24px) 0 0;
+  max-width: 570px;
+  color: #334f71;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.bh-login-feature-list {
+  margin-top: clamp(28px, 4.3vh, 44px);
+  display: grid;
+  gap: clamp(18px, 3.3vh, 34px);
+}
+
+.bh-login-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(16px, 1.6vw, 26px);
+}
+
+.bh-login-feature-icon {
+  width: clamp(62px, 4.85vw, 86px);
+  height: clamp(62px, 4.85vw, 86px);
+  border-radius: clamp(13px, 1vw, 16px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  font-size: 2rem;
+}
+
+.bh-login-feature-icon--green {
+  background: #edf7e7;
+  color: #45ad30;
+}
+
+.bh-login-feature-icon--blue {
+  background: #eaf1fc;
+  color: #2e7cdc;
+}
+
+.bh-login-feature-copy {
+  min-width: 0;
+}
+
+.bh-login-feature-copy h2 {
+  margin: clamp(2px, 0.55vw, 10px) 0 0;
+  color: #123560;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.bh-login-feature-copy p {
+  margin: clamp(5px, 0.55vw, 9px) 0 0;
+  max-width: 250px;
+  color: #334f71;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.bh-login-card-wrap {
+  position: relative;
+  z-index: 2;
+  justify-self: end;
+  width: 100%;
+  padding-top: clamp(22px, 4vh, 40px);
+}
+
+.bh-login-card {
+  width: 100%;
+  min-height: clamp(580px, calc(100dvh - 218px), 788px);
+  border: 1px solid #e4ebf6;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 22px 54px rgba(15, 52, 96, 0.08);
+  padding: clamp(48px, 7.8vh, 80px) clamp(34px, 3.35vw, 60px) clamp(30px, 5vh, 52px);
+}
+
+.bh-login-card h2 {
+  margin: 0;
+  color: #0f2f5d;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.bh-login-card-subtitle {
+  margin: 12px 0 0;
+  max-width: 468px;
+  color: #4a6280;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.bh-login-demo-note {
+  margin: 10px 0 0;
+  color: #365b85;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.bh-login-form {
+  margin-top: clamp(28px, 4.5vh, 46px);
+}
+
+.bh-login-error-text {
+  margin: 2px 0 12px;
+  color: #c52424;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.bh-login-field {
+  margin-bottom: clamp(16px, 2.6vh, 27px);
+}
+
+.bh-login-field label {
+  display: block;
+  margin-bottom: clamp(8px, 1.15vh, 12px);
+  color: #143761;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bh-login-input-shell {
+  width: 100%;
+  height: clamp(50px, 5.8vh, 62px);
+  border-radius: 14px;
+  border: 1px solid var(--bh-border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 clamp(14px, 1.15vw, 16px);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bh-login-input-shell:focus-within {
+  border-color: #86a6d2;
+  box-shadow: 0 0 0 3px rgba(117, 152, 198, 0.2);
+}
+
+.bh-login-input-icon,
+.bh-login-eye-btn {
+  color: #5a7394;
+  font-size: 1.26rem;
+  flex: none;
+}
+
+.bh-login-input-shell input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #153661;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.bh-login-input-shell input::placeholder {
+  color: #93a5bc;
+}
+
+.bh-login-eye-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bh-login-meta-row {
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bh-login-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d3f69;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.bh-login-remember input {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 1px solid #cfdae8;
+  appearance: none;
+  background: #fff;
+  cursor: pointer;
+  flex: none;
+}
+
+.bh-login-remember input:checked {
+  border-color: #41ad2f;
+  background: linear-gradient(135deg, #53ba2f, #0d2f66);
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+.bh-login-forgot-link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #44b12f;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.bh-login-submit-btn {
+  margin-top: clamp(24px, 3.9vh, 40px);
+  width: 100%;
+  height: clamp(48px, 5vh, 52px);
+  border: 0;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(96deg, #4bbb30 0%, #2d9a42 43%, #0c3068 100%);
+  box-shadow: 0 16px 36px rgba(13, 50, 92, 0.22);
+}
+
+.bh-login-submit-btn:disabled {
+  cursor: wait;
+  opacity: 0.82;
+}
+
+.bh-login-register-copy {
+  margin: clamp(26px, 3.6vh, 36px) 0 0;
+  text-align: center;
+  color: #5d7492;
+  font-size: 15px;
+}
+
+.bh-login-register-link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #43b12f;
+  font-weight: 600;
+}
+
+:root[data-theme="dark"] .bh-login-register-link {
+  color: #65d14d;
+}
+
+.bh-login-alert-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(12, 31, 58, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.bh-login-alert-card {
+  width: min(360px, 100%);
+  border: 1px solid rgba(214, 223, 237, 0.88);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 28px 70px rgba(9, 39, 90, 0.2);
+  padding: 30px 28px 28px;
+  text-align: center;
+  color: #0f2f5d;
+}
+
+.bh-login-alert-spinner {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: block;
+  border: 5px solid #e5f2df;
+  border-top-color: #46b02f;
+  border-right-color: #0d2f60;
+  animation: bh-login-spin 0.82s linear infinite;
+}
+
+.bh-login-alert-card h3 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.bh-login-alert-card p {
+  margin: 10px auto 0;
+  max-width: 270px;
+  color: #506783;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.bh-login-footer {
+  position: relative;
+  flex: 0 0 var(--bh-footer-height);
+  z-index: 20;
+  border-top: 1px solid #dde7f3;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.bh-login-footer-inner {
+  width: min(1680px, calc(100% - clamp(56px, 7vw, 160px)));
+  margin: 0 auto;
+  min-height: var(--bh-footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #516a89;
+  font-size: 14px;
+}
+
+.bh-login-footer-inner nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.bh-login-footer-inner nav a {
+  color: #3a557a;
+  font-weight: 500;
+}
+
+.bh-login-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bh-login-deco-top-dots {
+  top: clamp(24px, 4vh, 40px);
+  right: clamp(42px, 4vw, 72px);
+  width: clamp(90px, 6.5vw, 116px);
+  height: clamp(66px, 5vw, 88px);
+  opacity: 0.4;
+  background-image: radial-gradient(circle, rgba(108, 163, 236, 0.66) 2px, transparent 2.4px);
+  background-size: 20px 20px;
+}
+
+.bh-login-deco-mid-dots {
+  top: 63%;
+  left: 42.5%;
+  width: clamp(104px, 7.8vw, 138px);
+  height: clamp(76px, 5.4vw, 96px);
+  opacity: 0.44;
+  background-image: radial-gradient(circle, rgba(88, 157, 237, 0.68) 2.2px, transparent 2.4px);
+  background-size: 19px 19px;
+}
+
+.bh-login-deco-ring {
+  top: clamp(300px, 39.8vh, 410px);
+  left: 25%;
+  width: clamp(230px, 18.5vw, 330px);
+  height: clamp(230px, 18.5vw, 330px);
+  border-radius: 50%;
+  border: clamp(44px, 3.6vw, 64px) solid rgba(216, 226, 214, 0.42);
+}
+
+.bh-login-deco-wave-green {
+  left: clamp(-120px, -4vw, -70px);
+  bottom: var(--bh-footer-height);
+  width: clamp(470px, 36.5vw, 650px);
+  height: clamp(108px, 17.5vh, 180px);
+  border-radius: 58% 42% 0 0 / 100% 100% 0 0;
+  background: linear-gradient(102deg, #4fbe2f 2%, #0d366d 78%);
+}
+
+.bh-login-deco-wave-blue {
+  left: clamp(170px, 15.3vw, 274px);
+  bottom: calc(var(--bh-footer-height) - clamp(250px, 31vh, 318px));
+  width: clamp(360px, 28vw, 500px);
+  height: clamp(360px, 28vw, 500px);
+  border-radius: 50%;
+  background: rgba(198, 211, 238, 0.7);
+}
+
+:root[data-theme="dark"] .bh-login-page {
+  --bh-navy: #d5e4ff;
+  --bh-navy-soft: #9eb4d8;
+  --bh-green: #65d14d;
+  --bh-border: #2a3f61;
+  --bh-bg: #0b1628;
+  background: linear-gradient(145deg, #0b1527 0%, #0d1c32 40%, #10213c 100%);
+}
+
+:root[data-theme="dark"] .bh-login-title,
+:root[data-theme="dark"] .bh-login-card h2 {
+  color: #e5efff;
+}
+
+:root[data-theme="dark"] .bh-login-description,
+:root[data-theme="dark"] .bh-login-feature-copy p,
+:root[data-theme="dark"] .bh-login-card-subtitle,
+:root[data-theme="dark"] .bh-login-demo-note,
+:root[data-theme="dark"] .bh-login-register-copy,
+:root[data-theme="dark"] .bh-login-footer-inner,
+:root[data-theme="dark"] .bh-login-field label,
+:root[data-theme="dark"] .bh-login-remember {
+  color: #a9bedf;
+}
+
+:root[data-theme="dark"] .bh-login-feature-copy h2,
+:root[data-theme="dark"] .bh-login-title-line-2 {
+  color: #d3e3fb;
+}
+
+:root[data-theme="dark"] .bh-login-card {
+  border-color: #2f4566;
+  background: rgba(16, 29, 49, 0.9);
+  box-shadow: 0 24px 56px rgba(2, 8, 20, 0.45);
+}
+
+:root[data-theme="dark"] .bh-login-input-shell {
+  border-color: #335278;
+  background: #11243f;
+}
+
+:root[data-theme="dark"] .bh-login-input-shell input {
+  color: #dbeafe;
+}
+
+:root[data-theme="dark"] .bh-login-input-shell input::placeholder {
+  color: #7f95b7;
+}
+
+:root[data-theme="dark"] .bh-login-input-icon,
+:root[data-theme="dark"] .bh-login-eye-btn {
+  color: #8da5c7;
+}
+
+:root[data-theme="dark"] .bh-login-forgot-link,
+:root[data-theme="dark"] .bh-login-register-link {
+  color: #65d14d;
+}
+
+:root[data-theme="dark"] .bh-login-footer {
+  border-top-color: #2a3f61;
+  background: rgba(11, 22, 40, 0.92);
+}
+
+:root[data-theme="dark"] .bh-login-feature-icon--green {
+  background: rgba(91, 175, 60, 0.2);
+  color: #6be047;
+}
+
+:root[data-theme="dark"] .bh-login-feature-icon--blue {
+  background: rgba(50, 114, 201, 0.24);
+  color: #69afff;
+}
+
+:root[data-theme="dark"] .bh-login-deco-ring {
+  border-color: rgba(67, 88, 123, 0.36);
+}
+
+:root[data-theme="dark"] .bh-login-deco-wave-blue {
+  background: rgba(48, 73, 112, 0.5);
+}
+
+@keyframes bh-login-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1380px) {
+  .bh-login-main {
+    width: min(1680px, calc(100% - clamp(44px, 5vw, 96px)));
+    grid-template-columns: minmax(395px, 1fr) clamp(430px, 37vw, 560px);
+    gap: clamp(24px, 3.2vw, 48px);
+  }
+
+  .bh-login-footer-inner {
+    width: min(1680px, calc(100% - clamp(44px, 5vw, 96px)));
+  }
+
+  .bh-login-title-line-2 {
+    white-space: normal;
+  }
+
+  .bh-login-title {
+    font-size: 34px;
+  }
+
+  .bh-login-description {
+    font-size: 15px;
+  }
+
+  .bh-login-feature-icon {
+    font-size: 1.75rem;
+  }
+
+  .bh-login-card h2 {
+    font-size: 28px;
+  }
+
+  .bh-login-card {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .bh-login-main {
+    width: min(1120px, calc(100% - 44px));
+    grid-template-columns: minmax(350px, 1fr) clamp(360px, 42vw, 450px);
+    gap: 24px;
+  }
+
+  .bh-login-card {
+    padding-inline: 28px;
+  }
+
+  .bh-login-title {
+    font-size: 30px;
+  }
+
+  .bh-login-description {
+    max-width: 500px;
+    font-size: 14px;
+  }
+
+  .bh-login-feature-icon {
+    font-size: 1.45rem;
+  }
+
+  .bh-login-feature-copy h2 {
+    font-size: 14px;
+  }
+
+  .bh-login-feature-copy p {
+    max-width: 220px;
+    font-size: 12.5px;
+  }
+
+  .bh-login-card h2 {
+    font-size: 24px;
+  }
+
+  .bh-login-card-subtitle,
+  .bh-login-input-shell input {
+    font-size: 13.5px;
+  }
+
+  .bh-login-field label,
+  .bh-login-remember,
+  .bh-login-forgot-link,
+  .bh-login-register-copy {
+    font-size: 13px;
+  }
+
+  .bh-login-submit-btn {
+    font-size: 14px;
+  }
+
+  .bh-login-input-icon,
+  .bh-login-eye-btn {
+    font-size: 1.1rem;
+  }
+
+  .bh-login-footer-inner {
+    font-size: 12.5px;
+  }
+
+  .bh-login-deco-ring {
+    left: 30%;
+    opacity: 0.72;
+  }
+
+  .bh-login-deco-mid-dots {
+    left: 45%;
+  }
+}
+
+@media (min-width: 881px) and (max-height: 760px) {
+  .bh-login-main {
+    padding-top: 26px;
+  }
+
+  .bh-login-title {
+    margin-top: 42px;
+    line-height: 1.34;
+  }
+
+  .bh-login-description {
+    line-height: 1.55;
+  }
+
+  .bh-login-feature-list {
+    margin-top: 30px;
+    gap: 18px;
+  }
+
+  .bh-login-feature-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .bh-login-card-wrap {
+    padding-top: 18px;
+  }
+
+  .bh-login-card {
+    min-height: 570px;
+    padding-top: 42px;
+    padding-bottom: 26px;
+  }
+
+  .bh-login-form {
+    margin-top: 24px;
+  }
+
+  .bh-login-field {
+    margin-bottom: 14px;
+  }
+
+  .bh-login-submit-btn {
+    margin-top: 20px;
+  }
+
+  .bh-login-register-copy {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 880px) {
+  .bh-login-page {
+    min-height: 100vh;
+  }
+
+  .bh-login-main {
+    width: min(680px, calc(100% - 32px));
+    min-height: auto;
+    padding: 22px 0 30px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .bh-login-left {
+    max-width: none;
+  }
+
+  .bh-login-logo {
+    height: 48px;
+  }
+
+  .bh-login-title {
+    margin-top: 28px;
+    max-width: 640px;
+    font-size: 32px;
+    line-height: 1.28;
+  }
+
+  .bh-login-title-line-2 {
+    white-space: normal;
+  }
+
+  .bh-login-description {
+    max-width: 620px;
+    font-size: 14px;
+  }
+
+  .bh-login-feature-list {
+    margin-top: 22px;
+    gap: 14px;
+  }
+
+  .bh-login-feature-item {
+    gap: 14px;
+  }
+
+  .bh-login-feature-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 14px;
+    font-size: 1.45rem;
+  }
+
+  .bh-login-feature-copy h2 {
+    margin-top: 2px;
+    font-size: 15px;
+  }
+
+  .bh-login-feature-copy p {
+    margin-top: 6px;
+    max-width: 360px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .bh-login-card-wrap {
+    justify-self: stretch;
+    padding-top: 4px;
+  }
+
+  .bh-login-card {
+    min-height: auto;
+    padding: 34px 24px 30px;
+    border-radius: 16px;
+  }
+
+  .bh-login-card h2 {
+    font-size: 25px;
+  }
+
+  .bh-login-card-subtitle {
+    max-width: 420px;
+  }
+
+  .bh-login-form {
+    margin-top: 26px;
+  }
+
+  .bh-login-footer-inner {
+    width: min(680px, calc(100% - 32px));
+    min-height: 66px;
+    font-size: 12.5px;
+  }
+
+  .bh-login-deco-ring {
+    top: 210px;
+    left: auto;
+    right: -86px;
+    width: 250px;
+    height: 250px;
+    border-width: 38px;
+  }
+
+  .bh-login-deco-mid-dots {
+    left: auto;
+    right: 38px;
+    top: 41%;
+  }
+
+  .bh-login-deco-wave-green,
+  .bh-login-deco-wave-blue {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .bh-theme-toggle--login {
+    top: 12px;
+    right: 12px;
+    height: 34px;
+    padding: 0 11px;
+    gap: 6px;
+  }
+
+  .bh-theme-toggle--login .bh-theme-toggle-label {
+    display: none;
+  }
+
+  .bh-login-main {
+    width: 100%;
+    padding: 20px 14px 28px;
+  }
+
+  .bh-login-logo {
+    height: 44px;
+  }
+
+  .bh-login-title {
+    margin-top: 24px;
+    font-size: 28px;
+  }
+
+  .bh-login-title-highlight {
+    display: block;
+  }
+
+  .bh-login-description {
+    max-width: 330px;
+    line-height: 1.58;
+    overflow-wrap: break-word;
+  }
+
+  .bh-login-feature-item {
+    gap: 12px;
+  }
+
+  .bh-login-feature-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.35rem;
+  }
+
+  .bh-login-feature-copy {
+    max-width: calc(100vw - 100px);
+  }
+
+  .bh-login-feature-copy p {
+    max-width: 250px;
+    overflow-wrap: break-word;
+  }
+
+  .bh-login-card {
+    padding: 28px 18px 26px;
+  }
+
+  .bh-login-card h2 {
+    font-size: 24px;
+  }
+
+  .bh-login-card-subtitle {
+    max-width: 320px;
+    font-size: 13.5px;
+    line-height: 1.56;
+    overflow-wrap: break-word;
+  }
+
+  .bh-login-field {
+    margin-bottom: 14px;
+  }
+
+  .bh-login-input-shell,
+  .bh-login-submit-btn {
+    height: 52px;
+    border-radius: 11px;
+  }
+
+  .bh-login-meta-row {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .bh-login-remember,
+  .bh-login-forgot-link,
+  .bh-login-register-copy {
+    font-size: 13px;
+  }
+
+  .bh-login-footer-inner {
+    width: 100%;
+    min-height: 66px;
+    padding: 10px 14px;
+    align-items: flex-start;
+  }
+
+  .bh-login-deco-top-dots {
+    top: 16px;
+    right: 18px;
+    width: 78px;
+    height: 62px;
+    background-size: 16px 16px;
+  }
+
+  .bh-login-deco-mid-dots,
+  .bh-login-deco-ring {
+    display: none;
+  }
+}
